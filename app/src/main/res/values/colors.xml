@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!-- modified by Guo Jinyu -->
+<resources>
+    <color name="colorPrimary">#5B9FD4</color>
+    <color name="colorPrimaryDark">#861B81D1</color>
+    <color name="colorAccent">#ADD8E6</color>
+    <color name="indigo">#E4F7F7</color>
+</resources>

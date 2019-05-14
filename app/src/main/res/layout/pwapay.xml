@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="200dp"
+
+    android:orientation="vertical">
+
+    <com.acker.simplezxing.demo.PasswordEditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:layout_weight="2"
+        android:text="com.acker.simplezxing.demo.PasswordEditText" />
+
+    <com.acker.simplezxing.demo.CustomerKeyboard
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+version = "1.5"
+group = "com.acker"
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "26.0.0"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 6
+        versionName version
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+ext {
+    PUBLISH_GROUP_ID = group
+    PUBLISH_ARTIFACT_ID = 'simplezxing'
+    PUBLISH_VERSION = version
+}
+
