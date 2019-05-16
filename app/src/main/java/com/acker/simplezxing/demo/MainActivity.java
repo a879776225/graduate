@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
     private String truckJson = "truckJson";
     private String userinfo = "userinfo";
     private Context mContext;
-    private String url = "http://2108776x3j.imwork.net/WebService.asmx";
+//    private String url = "http://2108776x3j.imwork.net/WebService.asmx";
+    private String url = "http://192.168.43.169/WebService.asmx";
     private String soapAction = NameSpace + MethodName;
     private String soapAction1 = NameSpace + cargoJson;
     private String soapAction2 = NameSpace + truckJson;
@@ -133,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
         usedname = findViewById(R.id.username);
 //        usedname.setText(downuserinfo.getUsername());
+        ActivityCollector.addActivity(this);
         drawerLayout = findViewById(R.id.drawer_layout);
         if(headtextview==null)
         Log.d("main33",     "sdfsfd");
@@ -190,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
                         Aboutour.actionStart(MainActivity.this);
                         break;
                     case R.id.exit:
-                        System.exit(0);
+                        ActivityCollector.finishAll();
                         break;
                     default:
                         break;
@@ -516,5 +518,10 @@ public class MainActivity extends AppCompatActivity {
             result = e.getMessage();
         }
         return result;
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.removeActivity(this);
     }
 }

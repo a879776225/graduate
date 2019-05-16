@@ -12,7 +12,8 @@ public class Conn {
     private String NameSpace = "http://tempuri.org/";
     private String MethodName = "logpay";
     private String MethodNamelog = "log";
-    private String url = "http://2108776x3j.imwork.net/WebService.asmx";
+//    private String url = "http://2108776x3j.imwork.net/WebService.asmx";
+    private String url = "http://192.168.43.169/WebService.asmx";
     private String soapAction = NameSpace + MethodName;
     private String soapActionlog=NameSpace+MethodNamelog;
 
